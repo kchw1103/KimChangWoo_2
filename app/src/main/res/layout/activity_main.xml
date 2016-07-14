@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu"
+    tools:context="com.example.coffeorder.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[Coffee]"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:src="@drawable/coffee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentBottom="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="30dp"
+        android:id="@+id/quantityCoffee"
+        android:textColor="#000000"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="260dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="30dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="400dp"
+        android:textColor="#000000"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="30dp"
+        android:layout_marginTop="450dp"
+        android:textColor="#000000"
+        android:layout_alignStart="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:layout_marginTop="450dp"
+        android:layout_alignStart="@+id/quantityCoffee"
+        android:id="@+id/priceCoffee" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textSize="30dp"
+        android:textColor="#C62828"
+        android:layout_alignTop="@+id/priceCoffee"
+        android:layout_marginRight="12dp"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/button"
+        android:layout_alignBottom="@+id/quantityCoffee"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginEnd="22dp"
+        android:onClick="decreaseNumber"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignEnd="@+id/imageView"
+        android:onClick="increaseNumber"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="orderCoffee"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetAll"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toStartOf="@+id/button3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:id="@+id/order"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_toEndOf="@+id/button3" />
+
+</RelativeLayout>
